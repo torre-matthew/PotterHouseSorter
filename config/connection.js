@@ -1,10 +1,11 @@
 let mysql = require("mysql");
+let sqlPass = require("../config/dbpass");
 
 let connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "Loveless27**",
+    password: sqlPass,
     database: "phs_db"
   });
 
