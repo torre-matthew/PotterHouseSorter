@@ -1,0 +1,20 @@
+.house-section {
+    height: 200px;
+}
+
+.gryffindor {
+    background-image: url(../images/gryffindor.jpg);
+    padding: 50px;
+}
+
+.hufflepuff {
+    background-image: url(../images/hufflepuff.jpg);
+}
+
+.ravenclaw {
+    background-image: url(../images/ravenclaw.jpg);
+}
+
+.slytherin {
+    background-image: url(../images/slytherin.jpg);
+}
