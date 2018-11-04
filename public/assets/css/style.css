@@ -1,12 +1,3 @@
-.house-section {
-    /* display: table;
-    width: 100%; */
-}
-
-.col {
-    /* margin: 5px; */
-}
-
 .unsorted {
     text-align: center;
 }
@@ -40,13 +31,15 @@
 }
 
 .sorted-name-display {
-    font-size: 24px;
+    font-size: 20px;
     color: white;
+    font-weight: bold;
 }
 
 .unsorted-name-display {
-    font-size: 12px;
+    font-size: 15px;
     color: black;
+    font-weight: bold;
 }
 
 .btn-small {
@@ -74,4 +67,16 @@
 .huff-btn {
     color: #726255;
     background-color: #ecb939;
+}
+
+.display-name-cont {
+    text-align: center;
+}
+
+@media screen and (max-width: 440px) {
+
+img {
+
+}
+
 }
