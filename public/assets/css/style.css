@@ -4,35 +4,39 @@
 }
 
 .col {
-    /* display: table-cell; */
+    /* margin: 5px; */
+}
+
+.unsorted {
+    text-align: center;
 }
 
 .gryffindor {
     background-image: url(../images/longgryffbar.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 500px;
 }
 
 .hufflepuff {
     background-image: url(../images/longhuggbar.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 500px;
 }
 
 .ravenclaw {
     background-image: url(../images/longravenbar.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 500px;
 }
 
 .slytherin {
     background-image: url(../images/longslythbar.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 500px;
 }
 
 .sorted-name-display {

@@ -12,8 +12,8 @@ if (process.env.JAWSDB_URL) {
     user: "root",
     password: sqlPass,
     database: "phs_db"
-  })
-}
+  });
+};
 
   connection.connect(function(err) {
     if (err) {
