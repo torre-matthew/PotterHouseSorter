@@ -24,7 +24,23 @@ let getAllByHouse = (house, cb) => {
     });
 }
 
+let addNameToDB = (name, cb) => {
+    orm.addperson(name, function(res) {
+        cb(res);
+    })
+}
 
+let addToHouse = (id, house, cb) => {
+    orm.addtohouse(id, house, function(res) {
+        cb(res);
+    })
+}
+
+let softDelete = (id, cb) => {
+    orm.delete(id, function(res) {
+        cb(res);
+    })
+}
 
 
 let needsSorting = {
@@ -32,6 +48,9 @@ let needsSorting = {
     getAllUnsorted: getAllUnsorted,
     getAllByHouse: getAllByHouse,
     getAllSorted: getAllSorted,
+    add: addNameToDB,
+    addToHouse: addToHouse,
+    delete: softDelete
 }
 
 module.exports = needsSorting;

@@ -1,20 +1,73 @@
 .house-section {
-    height: 200px;
+    /* display: table;
+    width: 100%; */
+}
+
+.col {
+    /* display: table-cell; */
 }
 
 .gryffindor {
-    background-image: url(../images/gryffindor.jpg);
-    padding: 50px;
+    background-image: url(../images/longgryffbar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
 }
 
 .hufflepuff {
-    background-image: url(../images/hufflepuff.jpg);
+    background-image: url(../images/longhuggbar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
 }
 
 .ravenclaw {
-    background-image: url(../images/ravenclaw.jpg);
+    background-image: url(../images/longravenbar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
 }
 
 .slytherin {
-    background-image: url(../images/slytherin.jpg);
+    background-image: url(../images/longslythbar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+
+.sorted-name-display {
+    font-size: 24px;
+    color: white;
+}
+
+.unsorted-name-display {
+    font-size: 12px;
+    color: black;
+}
+
+.btn-small {
+    height: 20.4px;
+    line-height: 19.4px;
+    font-size: 12px;
+    width: 102.4px;
+}
+
+.sly-btn {
+    color: #aaaaaa;
+    background-color: #1a472a;
+}
+
+.gryf-btn {
+    color: #d3a625;
+    background-color: #740001;
+}
+
+.rav-btn {
+    color: #946b2d;
+    background-color: #222f5b;
+}
+
+.huff-btn {
+    color: #726255;
+    background-color: #ecb939;
 }

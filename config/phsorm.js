@@ -12,7 +12,7 @@ let getAllFromDB = (table, cb) => {
 }
 
 let getAllUnSortedFromDB = (table, cb) => {
-    let queryString = "select name from " + table + " where sorted = false;";
+    let queryString = "select name, id from " + table + " where sorted = false and deleted = false";
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
@@ -32,7 +32,7 @@ let getAllSortedFromDB = (table, cb) => {
 }
 
 let getAllByHouse = (house, cb) => {
-    let queryString = "select name from sortings where house = ?";
+    let queryString = "select name, id from sortings where house = ?";
         connection.query(queryString, [house], function(err, result) {
             if (err) {
                 throw err;
@@ -42,8 +42,8 @@ let getAllByHouse = (house, cb) => {
 }
 
 let addPersonToDB = (name, cb) => {
-    let queryString = "insert into sortings (name);";
-        connection.query(queryString, name, function(err, result) {
+    let queryString = "insert into sortings set ?";
+        connection.query(queryString, {name: name, sorted: false, deleted: false}, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -51,9 +51,19 @@ let addPersonToDB = (name, cb) => {
         });
 }
 
-let addToHouse = (name, cb) => {
-    let queryString = "insert into sortings (name);";
-        connection.query(queryString, name, function(err, result) {
+let addToHouse = (id, house, cb) => {
+    let queryString = "update sortings set ? where id = " + id;
+        connection.query(queryString, {house: house, sorted: true}, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+}
+
+let softDelete = (id, cb) => {
+    let queryString = "update sortings set ? where id = " + id;
+        connection.query(queryString, {house: null, sorted: false, deleted: true}, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -66,8 +76,9 @@ let orm = {
     getallunsorted: getAllUnSortedFromDB,
     getallsorted: getAllSortedFromDB,
     getallbyhouse: getAllByHouse, 
-    add: addPersonToDB,
-
+    addperson: addPersonToDB,
+    addtohouse: addToHouse,
+    delete: softDelete
 }
 
 module.exports = orm;
