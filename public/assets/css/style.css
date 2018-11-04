@@ -12,28 +12,28 @@
 }
 
 .gryffindor {
-    background-image: url(../images/longgryffbar.jpg);
+    background-image: url(../images/gryffstripes.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
 }
 
 .hufflepuff {
-    background-image: url(../images/longhuggbar.jpg);
+    background-image: url(../images/huffstripes.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
 }
 
 .ravenclaw {
-    background-image: url(../images/longravenbar.jpg);
+    background-image: url(../images/ravenstripes.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
 }
 
 .slytherin {
-    background-image: url(../images/longslythbar.jpg);
+    background-image: url(../images/slystripes.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;

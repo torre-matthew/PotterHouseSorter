@@ -4,6 +4,7 @@ getAllByHouse("Hufflepuff", "#hufflepuff-template", ".hufflepuff");
 getAllByHouse("Ravenclaw", "#ravenclaw-template", ".ravenclaw");
 getAllByHouse("Slytherin", "#slytherin-template", ".slytherin");
 getAllUnSorted("#unsorted-template", ".unsorted");
+$('.parallax').parallax();
 });
 
 
