@@ -1,5 +1,5 @@
 let mysql = require("mysql");
-let sqlPass = require("../config/dbpass");
+// let sqlPass = require("../config/dbpass");
 let connection;
 
 
